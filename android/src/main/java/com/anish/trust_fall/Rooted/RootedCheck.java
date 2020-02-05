@@ -29,11 +29,7 @@ public class RootedCheck {
     private static boolean rootBeerCheck(Context context) {
         RootBeer rootBeer = new RootBeer(context);
         Boolean rv;
-        if(Build.BRAND.contains(ONEPLUS) || Build.BRAND.contains(MOTO) || Build.BRAND.contains(XIAOMI)) {
-            rv = rootBeer.isRootedWithoutBusyBoxCheck();
-        } else {
-            rv = rootBeer.isRooted();
-        }
+        rv = rootBeer.isRootedWithoutBusyBoxCheck();
         return rv;
     }
 }
